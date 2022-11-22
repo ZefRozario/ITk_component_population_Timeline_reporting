@@ -1,0 +1,5 @@
+pandas
+itkdb
+datapane
+altair
+influxdb_client

@@ -1,7 +1,7 @@
 def GetITkCredentials():
     print("Getting ITk PDB info.")
-    return {'ac1':"rtj42020",'ac2':"lizlemon30"}
+    return {'ac1':"put the code 1 here",'ac2':"and code 2 here"}
 
 def GetDatapaneCredentials():
     print("Getting datapane info.")
-    return {'token':"2304732ee9cc725f2451e85e683e3e865370accd"}
+    return {'token':"put your token here"}

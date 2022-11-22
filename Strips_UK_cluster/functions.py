@@ -29,7 +29,7 @@ warnings.simplefilter("ignore", MissingPivotFunction)
 def sign_in_db():
     user = itkdb.core.User(accessCode1="", accessCode2="")
     ##you got to use your own path 
-    credDir="/home/ppe/z/zrozario/QT/Strips_UK_cluster"
+    credDir="<path to>/Strips_UK_cluster"
     if os.path.isdir(credDir):
         print("directory found:",credDir)
         sys.path.insert(1, credDir)
@@ -81,15 +81,12 @@ def loc(x,y):
     
 
 
-org_local = "CERN"
-token_local = "ZsQeKNr1x4no5JIAZ4vTMGJOwvy7sWi5PY-3-3G1DvOO1W-BWqfyTdaEtaN7l94GdmASTqcNu8bec3vHNSFPew=="
-# Store the URL of your InfluxDB instance
-url_local="http://localhost:8086"
 
 
-org_remote="PPE"
-token_remote="L6rEJsCRkYynT6B0bz9I57B7GKajTrGBA-Nh-9FBDrRycdysltiPZUAm4QphXnIHuKdCKKkNuOPcNWwHxLZ8zQ=="
-url_remote="http://194.36.1.20:8086/"
+
+org_remote="name of org"
+token_remote="token="
+url_remote="url"
 
 def influxClient():
     global clientV2_local

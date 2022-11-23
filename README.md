@@ -1,6 +1,7 @@
 # ITk Timebased reporting
 
 This is a quick tool to query the ITkdb and make live population timeline reports. Included is some basic code that should get the job done just make sure you get the paths right and download the right dependencies. I would recommend ```python3.9``` or above as some of the suff dosent work other wise. Try the tutorial first to see how the pipline works. Have a look at ```component migration plotting.pdf``` for some more info.
+
 ---
 ## Live reports
 - [UK-CHINA cluster component population](https://cloud.datapane.com/apps/9ArQjrk/component-migration-strips/)
@@ -8,7 +9,7 @@ This is a quick tool to query the ITkdb and make live population timeline report
 - [RAL Strips Stage, Type and Trashed](https://cloud.datapane.com/apps/dA9o997/component-stage-population-with-trashed-strips/)
 - [IZM Pixels Stage population](https://cloud.datapane.com/apps/Xknbv9k/component-stage-population-pixels/)
 ---
-## Heres a quick start guide:
+## Here's a quick start guide:
 
 
 1. Run the tutorial this will give you the dependencies and walk you through the pulling the data from the itkdb,setting up and using [Influxdb](https://docs.influxdata.com/influxdb/v2.0/install/) to time stamp the data, then pulling the time stamped data in a pandas dataframe, building a basic plot in [Altair](https://altair-viz.github.io/index.html) and finally build a [datapane](https://docs.datapane.com) report to share the plot. This should take 10-15 minutes.

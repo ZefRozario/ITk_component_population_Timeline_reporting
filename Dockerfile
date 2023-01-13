@@ -88,8 +88,4 @@ ENV INFLUXD_INIT_PING_ATTEMPTS 600
 ENV DOCKER_INFLUXDB_INIT_CLI_CONFIG_NAME default
 
 
-# add user other than root (for cern deployment)
-RUN adduser appuser
-# tmp access for running app
-RUN chown -R appuser:appuser /tmp
-RUN chmod 777 /tmp
+

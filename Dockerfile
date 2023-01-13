@@ -90,7 +90,7 @@ ENV DOCKER_INFLUXDB_INIT_CLI_CONFIG_NAME default
 # add user other than root (for cern deployment)
 RUN adduser appuser
 
-
+RUN mkdir /var/lib/influxdb2/engine
 RUN chown -R appuser:appuser /var/lib/influxdb2
 RUN chown -R appuser:appuser /etc/influxdb2
 RUN chmod 777 /var/lib/influxdb2/engine

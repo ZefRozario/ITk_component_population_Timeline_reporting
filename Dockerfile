@@ -93,7 +93,7 @@ RUN adduser appuser
 
 RUN chown -R appuser:appuser /var/lib/influxdb2
 RUN chown -R appuser:appuser /etc/influxdb2
-RUN chmod 777 /var/lib/influxdb2
+RUN chmod 777 /var/lib/influxdb2/engine
 RUN chmod 777 /etc/influxdb2
 
 

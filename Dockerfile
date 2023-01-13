@@ -81,6 +81,12 @@ CMD ["influxd"]
 
 EXPOSE 8086
 
+
+
+ENV INFLUX_CONFIGS_PATH /etc/influxdb2/influx-configs
+ENV INFLUXD_INIT_PORT 9999
+ENV INFLUXD_INIT_PING_ATTEMPTS 600
+ENV DOCKER_INFLUXDB_INIT_CLI_CONFIG_NAME default
 # add user other than root (for cern deployment)
 RUN adduser appuser
 

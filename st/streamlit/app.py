@@ -2,6 +2,10 @@ import streamlit as st
 import functions as funk
 from functions import *
 
+
+st.title('ITk Component Timeline Generator :chart_with_upwards_trend:')
+
+
 if 'stage' not in st.session_state:
     st.session_state.stage = 0
 

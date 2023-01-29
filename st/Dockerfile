@@ -20,9 +20,9 @@ RUN mkdir ./streamlit/scripts
 RUN mkdir ./streamlit/outputs
 # copy files
 COPY streamlit/* ./streamlit/
-COPY streamlit/pages/* ./streamlit/pages/
-COPY streamlit/htmls/* ./streamlit/htmls/
-COPY streamlit/scripts/* ./streamlit/scripts/
+#COPY streamlit/pages/* ./streamlit/pages/
+#COPY streamlit/htmls/* ./streamlit/htmls/
+#COPY streamlit/scripts/* ./streamlit/scripts/
 
 
 # add user other than root (for cern deployment)
@@ -30,8 +30,8 @@ RUN adduser appuser
 # tmp access for running app
 RUN chown -R appuser:appuser /code/streamlit
 RUN chmod 777 /code/streamlit
-RUN chmod 777 /code/streamlit/htmls
-RUN chmod 777 /code/streamlit/outputs
+#RUN chmod 777 /code/streamlit/htmls
+#RUN chmod 777 /code/streamlit/outputs
 # tmp access for running app
 RUN chown -R appuser:appuser /tmp
 RUN chmod 777 /tmp

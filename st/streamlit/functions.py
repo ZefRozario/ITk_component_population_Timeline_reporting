@@ -39,13 +39,13 @@ def sign_in_db():
         credDict=myDetails.GetITkCredentials()
         #print(credDict)
         user = itkdb.core.User(accessCode1=credDict['ac1'], accessCode2=credDict['ac2'])
-        st.write("done.")
+        #st.write("done.")
     else:
         st.write("no directory found:",credDir)
     user.authenticate()
     global myClient 
     myClient = itkdb.Client(user=user)
-    st.write(user.name+" your token expires in "+str(myClient.user.expires_in)+" seconds")
+    st.write("Hello "+user.name+"! Your token expires in: "+str(myClient.user.expires_in)+" seconds")
     return myClient
 
 
@@ -114,7 +114,7 @@ token_remote="9WDajdDUwk4EUso4t-uhtc4ZIFfpNPds4Wnrh7Hxzf_VHN_7ga7Uz8rUo-3NRjR2pF
 url_remote="https://itkinflux-itkinflux.app.cern.ch/"
 
 def influxClient():
-    st.write('chicken nuggets')
+    #st.write('chicken nuggets')
     global clientV2_local
     clientV2_local = influxdb_client.InfluxDBClient(
    url=url_remote,

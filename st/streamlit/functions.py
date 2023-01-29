@@ -14,7 +14,7 @@ import itkdb
 import itkdb.exceptions as itkX
 # visualisation
 import altair as alt
-import datapane as dp
+#import datapane as dp
 # influx 
 import influxdb_client
 from influxdb_client.client.write_api import SYNCHRONOUS
@@ -236,8 +236,8 @@ def alt_chart(q):
     
     return(chart)
 
-def upload(x):
-    dp.Report(
-        *x
-    ).upload(name="Component stage population (with trashed @ CERN): Strips",publicly_visible=True)
-    return()
+#def upload(x):
+ #   dp.Report(#
+        #*x
+    #).upload(name="Component stage population (with trashed @ CERN): Strips",publicly_visible=True)
+    #return()

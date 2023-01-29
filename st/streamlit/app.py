@@ -38,9 +38,9 @@ with st.form('Authorisation1'):
 
             x=funk.query(selected_locations[i])
 
-            charts.append(dp.Text("### Institute: "+str(selected_locations[i])))
-            charts.append(dp.Plot(funk.alt_chart(selected_locations)))
-            charts.append(dp.DataTable(x))
+            #charts.append(dp.Text("### Institute: "+str(selected_locations[i])))
+            #charts.append(dp.Plot(funk.alt_chart(selected_locations)))
+            #charts.append(dp.DataTable(x))
             st.altair_chart(funk.alt_chart(selected_locations[i]))
         st.write('All done.')
 st.button('Reset', on_click=set_stage, args=(0,))

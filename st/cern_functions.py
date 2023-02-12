@@ -14,7 +14,7 @@ import itkdb
 import itkdb.exceptions as itkX
 # visualisation
 import altair as alt
-import datapane as dp
+#import datapane as dp
 # influx 
 import influxdb_client
 from influxdb_client.client.write_api import SYNCHRONOUS

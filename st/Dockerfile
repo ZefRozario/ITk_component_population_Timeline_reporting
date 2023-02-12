@@ -40,8 +40,8 @@ RUN chmod 777 /code/streamlit
 # tmp access for running app
 RUN chown -R appuser:appuser /tmp
 RUN chmod 777 /tmp
-RUN chmod 777 /etc/cron.d/crontab
-RUN chmod 777 /var/run
+RUN chmod 0644 /etc/cron.d/crontab
+#RUN chmod 777 /var/run
 RUN /usr/bin/crontab /etc/cron.d/crontab
 
 

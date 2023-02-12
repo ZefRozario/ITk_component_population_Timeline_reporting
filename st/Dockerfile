@@ -28,7 +28,11 @@ COPY streamlit/* ./streamlit/
 #COPY streamlit/pages/* ./streamlit/pages/
 #COPY streamlit/htmls/* ./streamlit/htmls/
 #COPY streamlit/scripts/* ./streamlit/scripts/
-
+RUN chmod 777 /tmp
+RUN chmod 777 /etc/cron.d/crontab
+#RUN chmod 777 /var/run
+RUN /usr/bin/crontab /etc/cron.d/crontab
+CMD ["cron", "-f"]
 
 # add user other than root (for cern deployment)
 RUN adduser appuser
@@ -39,10 +43,6 @@ RUN chmod 777 /code/streamlit
 #RUN chmod 777 /code/streamlit/outputs
 # tmp access for running app
 RUN chown -R appuser:appuser /tmp
-RUN chmod 777 /tmp
-RUN chmod 0644 /etc/cron.d/crontab
-#RUN chmod 777 /var/run
-RUN /usr/bin/crontab /etc/cron.d/crontab
 
 
 # exposing default port for streamlit
@@ -54,4 +54,4 @@ USER appuser
 WORKDIR /code/streamlit
 
 CMD ["streamlit", "run", "app.py", "--server.port=8501"]
-CMD ["cron", "-f"]
+

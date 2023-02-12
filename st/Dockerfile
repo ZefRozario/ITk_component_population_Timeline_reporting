@@ -11,7 +11,6 @@ RUN apt-get update && apt-get -y install cron vim
 # make and set working directory
 RUN mkdir /ext
 RUN mkdir /code
-RUN mkdir /var/run
 COPY crontab /etc/cron.d/crontab
 WORKDIR /code
 COPY requirements.txt requirements.txt

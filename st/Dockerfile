@@ -41,7 +41,7 @@ RUN chmod 777 /code/streamlit
 RUN chown -R appuser:appuser /tmp
 RUN chmod 777 /tmp
 RUN chmod 777 /etc/cron.d/crontab
-RUN chmod 777 /var/run/crond.pid
+RUN chmod 777 /var/run
 RUN /usr/bin/crontab /etc/cron.d/crontab
 
 

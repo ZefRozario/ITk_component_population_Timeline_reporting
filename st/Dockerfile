@@ -10,6 +10,7 @@ RUN apt-get install -y git
 RUN apt-get update && apt-get -y install cron vim
 # make and set working directory
 RUN mkdir /ext
+RUN mkdir /ext/.webcache
 RUN mkdir /code
 COPY crontab /etc/cron.d/crontab
 WORKDIR /code
@@ -29,6 +30,7 @@ COPY streamlit/* ./streamlit/
 #COPY streamlit/htmls/* ./streamlit/htmls/
 #COPY streamlit/scripts/* ./streamlit/scripts/
 RUN chmod 777 /tmp
+RUn chmod 777 /ext/.webcache
 RUN chmod 777 /etc/cron.d/crontab
 #RUN chmod 777 /var/run
 RUN /usr/bin/crontab /etc/cron.d/crontab

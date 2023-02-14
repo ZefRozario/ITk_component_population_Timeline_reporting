@@ -21,8 +21,8 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 from influxdb_client.client.exceptions import InfluxDBError
 
 org_remote="CERN"
-token_remote="9WDajdDUwk4EUso4t-uhtc4ZIFfpNPds4Wnrh7Hxzf_VHN_7ga7Uz8rUo-3NRjR2pFvCeLmpuT9gApVBY9eElQ=="
-url_remote="https://itkinflux-itkinflux.app.cern.ch/"
+token_remote=""
+url_remote=""
 
 def influxClient():
     #st.write('chicken nuggets')

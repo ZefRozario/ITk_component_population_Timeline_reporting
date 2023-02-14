@@ -2,7 +2,7 @@ import cern_functions as cern_funk
 from cern_functions import * 
 
 
-x=cern_funk.user_aut_itkdb('rtj42020','lizlemon30')
+x=cern_funk.user_aut_itkdb('','')
 print('ajdksfakjdlf')
 intu_codes=cern_funk.GetInstitutesCodes(x)
 print('step 2')
